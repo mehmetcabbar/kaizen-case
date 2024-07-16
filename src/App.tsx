@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import { fontFamily, fontSize } from './utils/constants';
+import { myColors } from './utils/constants/myColors';
 
 
 const App = () => {
@@ -33,10 +34,12 @@ const styles = StyleSheet.create({
   regular: {
     fontFamily: fontFamily.REGULAR,
     fontSize: fontSize.SMALL,
+    color: myColors.MY_RED
   },
   bold: {
     fontFamily: fontFamily.BOLD,
-    fontSize: fontSize.LARGE
+    fontSize: fontSize.LARGE,
+    color: myColors.MY_BLACK
   }
 })
 
