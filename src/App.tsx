@@ -9,21 +9,41 @@ import {
 import { fontFamily, fontSize } from './utils/constants';
 import { myColors } from './utils/constants/myColors';
 import Logo from './images/logo.svg';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.container}>
+        <Logo />
+        <Text style={styles.regular}>It's first</Text>
+        <Text style={styles.bold}>Its's second</Text>
+      </View>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
 
 
 const App = () => {
   const { t } = useTranslation();
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        barStyle={'light-content'}
-      />
-      <View style={styles.container}>
-        <Logo />
-        <Text style={styles.regular}>{t("kaizen_case_study")}</Text>
-        <Text style={styles.bold}>{t("kaizen_case_study_bold")}</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
 
