@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { fontFamily, fontSize } from './utils/constants';
 import { myColors } from './utils/constants/myColors';
+import Logo from './images/logo.svg';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         barStyle={'light-content'}
       />
       <View style={styles.container}>
+        <Logo />
         <Text style={styles.regular}>{t("kaizen_case_study")}</Text>
         <Text style={styles.bold}>{t("kaizen_case_study_bold")}</Text>
       </View>
