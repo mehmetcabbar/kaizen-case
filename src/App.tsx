@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   SafeAreaView,
   ScrollView,
@@ -8,6 +9,7 @@ import {
 
 
 const App = () => {
+  const { t } = useTranslation();
   return (
     <SafeAreaView>
       <StatusBar
@@ -16,7 +18,7 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic">
         <View>
-          <Text>Kaizen Case Study</Text>
+          <Text>{t("kaizen_case_study")}</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
