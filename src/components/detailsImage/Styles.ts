@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { myColors } from "../../utils/constants/myColors";
 import { fontFamily, fontSize } from "../../utils/constants";
 
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     goBack: {
         position: 'absolute',
-        top: 50,
+        top: Platform.OS === "ios" ? 50 : 25,
         left: 10,
         zIndex: 1
     },

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, View } from 'react-native'
 import { styles } from './Styles'
 import myData from '../../data/data.json'
@@ -7,7 +6,6 @@ import Spacer from '../spacer/Spacer'
 
 const DetailsContent = () => {
     const data = first(myData?.content)
-    console.log("what is data", data)
 
     return (
         <View style={styles.container}>
