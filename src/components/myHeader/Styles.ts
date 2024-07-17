@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: Platform.OS === "ios" ? 10 : 14
+        marginTop: Platform.OS === "ios" ? 10 : 14,
+        paddingHorizontal: 14
     },
     buttonWrapper: {
         flexDirection: 'row'

@@ -1,0 +1,29 @@
+{
+    "filters": [
+        { 
+            "id": 1, 
+            "name": "Fırsat Bul", 
+            "image": "require('../assets/images/filter1.png')"
+        },
+        { 
+            "id": 2, 
+            "name": "Sprite", 
+            "image": "require('../assets/images/filter1.png')"
+        },
+        { 
+            "id": 3, 
+            "name": "Burger King", 
+            "image": "require('../assets/images/filter1.png')"
+        },
+        { 
+            "id": 4, 
+            "name": "Trendyol", 
+            "image": "require('../assets/images/filter1.png')"
+        },
+        { 
+            "id": 5, 
+            "name": "Yemek Sepeti", 
+            "image": "require('../assets/images/filter1.png')"
+        }
+    ]
+}
