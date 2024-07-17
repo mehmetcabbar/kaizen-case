@@ -2,8 +2,9 @@
     "translation": {
         "explore": "Keşfet", 
         "daha_wallet": "Daha Cüzdan", 
-        "function_will_be_added_soon": "Function will be added soon",
-        "please_try_again_later": "Please try again later",
-        "login": "Giriş Yap"
+        "function_will_be_added_soon": "Yakında...",
+        "please_try_again_later": "Lütfen, daha sonra tekrar deneyin!",
+        "login": "Giriş Yap", 
+        "last_twelve_days": "son {{count}} gün"
     }
 }

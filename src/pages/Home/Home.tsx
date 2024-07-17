@@ -3,9 +3,9 @@ import { styles } from './Styles'
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { IHomePageTypes } from '../../types/Types';
 import MyHeader from '../../components/myHeader/MyHeader'
-import ButtonWithIcon from '../../components/buttonWithIcon/ButtonWithIcon';
 import Spacer from '../../components/spacer/Spacer';
 import HorizontalFilter from '../../components/horizontalFilter/HorizontalFilter';
+import SingleContent from '../../components/singleContent/SingleContent';
 
 
 const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {
@@ -14,6 +14,8 @@ const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {
             <MyHeader />
             <Spacer paddingVertical={10} />
             <HorizontalFilter />
+            <Spacer paddingVertical={10} />
+            <SingleContent />
         </View>
     )
 }
