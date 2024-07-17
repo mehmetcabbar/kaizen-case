@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 import {
   SafeAreaView,
   StatusBar,
@@ -7,10 +9,12 @@ import Navigation from './navigation/Navigation';
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar barStyle="default" />
-      <Navigation />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle="default" />
+        <Navigation />
+      </SafeAreaView>
+    </Provider>
   );
 };
 

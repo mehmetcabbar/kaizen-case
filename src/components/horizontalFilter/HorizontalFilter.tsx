@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
 import { FlatList, View } from 'react-native'
 import ButtonWithIcon from '../buttonWithIcon/ButtonWithIcon'
 import { styles } from './Styles'
 import localData from '../../data/data.json'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeActive } from '../../redux/slices/activeSlice'
+import { RootState } from '../../redux/store'
 
 const HorizontalFilter = () => {
-    const [active, setActive] = useState(0)
+    const dispatch = useDispatch()
+    const active = useSelector((state: RootState) => state.active.value)
+
 
     return (
         <View style={styles.container}>
@@ -14,9 +18,8 @@ const HorizontalFilter = () => {
                 renderItem={({ item, index }) => (
                     <ButtonWithIcon
                         text={item?.name}
-                        active={active}
                         index={index}
-                        onPress={() => setActive(index)}
+                        onPress={() => dispatch(changeActive(index))}
                     />
                 )}
                 keyExtractor={(item: any) => item?.id} // I will check type error later

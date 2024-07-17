@@ -1,4 +1,4 @@
-import { Alert, Text, TouchableOpacity, } from 'react-native'
+import { Text, TouchableOpacity, } from 'react-native'
 import { styles } from './Styles'
 import Brands1 from '../../images/brands/brands1.svg'
 import Brands2 from '../../images/brands/brands2.svg'
@@ -7,15 +7,17 @@ import Brands4 from '../../images/brands/brands4.svg'
 import Brands5 from '../../images/brands/brands5.svg'
 
 import { isEqual } from 'lodash'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
 
 type Props = {
     text: string,
-    active: number,
     onPress: () => void | void,
     index: number
 }
 
-const ButtonWithIcon = ({ text, active, onPress, index }: Props) => {
+const ButtonWithIcon = ({ text, onPress, index }: Props) => {
+    const active = useSelector((state: RootState) => state.active.value)
 
     const getMyImage = () => {
         if (isEqual(index, 0)) {
