@@ -1,12 +1,14 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
+import { styles } from './Styles'
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { IHomePageTypes } from '../../types/Types';
+import MyHeader from '../../components/myHeader/MyHeader'
 
-type Props = {}
 
-const Home = (props: Props) => {
+const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "white" }}>
-            <Text>Home Screen!</Text>
+        <View style={styles.container}>
+            <MyHeader />
         </View>
     )
 }

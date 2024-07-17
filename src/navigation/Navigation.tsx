@@ -1,7 +1,7 @@
 import { Platform, View } from 'react-native';
 import { fontFamily, fontSize } from '../utils/constants';
 import { createBottomTabNavigator, BottomTabNavigationOptions, BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { getFocusedRouteNameFromRoute, NavigationContainer } from '@react-navigation/native';
 import { myColors } from '../utils/constants/myColors';
 import { useTranslation } from 'react-i18next';
 import { TabParamList } from '../types/Types';
@@ -42,6 +42,7 @@ const Navigation = () => {
             <Tab.Navigator
                 screenOptions={({ route }): BottomTabNavigationOptions => ({
                     tabBarStyle: {
+                        display: getFocusedRouteNameFromRoute(route) === "Details" ? 'none' : 'flex',
                         position: 'absolute',
                         bottom: 0,
                         left: 0,
