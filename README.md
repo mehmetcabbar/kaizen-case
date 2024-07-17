@@ -17,12 +17,10 @@ npm install
 ```
 
 ## For IOS
-Open your terminal and go to ios folder. 
+Open your project folder in terminal and run this code. 
 
 ```sh
-cd ios
-pod install 
-cd ..
+cd ios && pod install && cd ..
 ```
 
 ### Some XCode, React Native compatibility issue 
@@ -52,3 +50,14 @@ npx react-native run-ios
 ```sh
 npx react-native run-android
 ```
+
+### Some XCode, React Native compatibility issue 
+To run it on iOS, first make sure that XCode is installed on your computer. If you In React Native projects, some variables such as operating system, ruby ​​version and XCode version are required for the installation stages. If you have any problems, please review the versions below and edit the project and local setup settings.
+
+```sh
+ruby: 2.7.5
+Xcode: 15.4
+```
+
+I hope I was able to help you get the project off the ground. Now you can take the time to review the code.
+
