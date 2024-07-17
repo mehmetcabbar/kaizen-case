@@ -5,4 +5,5 @@ export const myColors = {
     MY_BORDER: "#F4F6F5",
     MY_NAV_BORDER: "#ECEEEF",
     MY_GRAY: "#BBBBBB",
+    MY_NAV_GRAY: "#EBEBEB",
 }
