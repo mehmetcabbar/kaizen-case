@@ -1,21 +1,23 @@
 import { Platform, View } from 'react-native';
 import { fontFamily, fontSize } from '../utils/constants';
-import { styles } from './Styles';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator, BottomTabNavigationOptions, BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-import { useTranslation } from 'react-i18next';
+import { NavigationContainer } from '@react-navigation/native';
 import { myColors } from '../utils/constants/myColors';
+import { useTranslation } from 'react-i18next';
 import { TabParamList } from '../types/Types';
+import { styles } from './Styles';
 
 // Our pages are here
-import HomeStackScreen from './HomeStackScreen';
+import Portal from '../pages/Portal/Portal';
 import Wallet from '../pages/Wallet/Wallet';
+import HomeStackScreen from './HomeStackScreen';
 
 // Our icons are here
-import ExploreIcon from '../images/navbarIcon/explore.svg';
 import WalletIcon from '../images/navbarIcon/wallet.svg';
 import PortalIcon from '../images/navbarIcon/portal.svg';
-import Portal from '../pages/Portal/Portal';
+import ExploreIcon from '../images/navbarIcon/explore.svg';
+import { useEffect, useState } from 'react';
+import SplashScreen from '../pages/SplashScreen/SplashScreen';
 
 
 
@@ -23,6 +25,18 @@ const Tab = createBottomTabNavigator<TabParamList>();
 
 const Navigation = () => {
     const { t } = useTranslation()
+    const [loading, setLoading] = useState(true)
+
+
+
+    useEffect(() => {
+        setLoading(false)
+    }, [loading])
+
+    if (loading) {
+        return <SplashScreen />
+    }
+
     return (
         <NavigationContainer>
             <Tab.Navigator
@@ -32,6 +46,8 @@ const Navigation = () => {
                         bottom: 0,
                         left: 0,
                         right: 0,
+                        borderTopColor: myColors.MY_NAV_BORDER,
+                        borderTopWidth: 1.5,
                         backgroundColor: myColors.MY_WHITE,
                         borderTopLeftRadius: 20,
                         borderTopRightRadius: 20,
