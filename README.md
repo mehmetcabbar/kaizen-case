@@ -1,5 +1,6 @@
 # KAIZEN - Frontend Case
 
+This project was made with React Native CLI and the version number is a little low (since the projects I am currently working on this version).
 Please follow the steps below to get the project up and running.
 
 ## Clone the Project
