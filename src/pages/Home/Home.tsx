@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { StatusBar, View } from 'react-native'
 import { styles } from './Styles'
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { IHomePageTypes } from '../../types/Types';
@@ -7,6 +7,7 @@ import Spacer from '../../components/spacer/Spacer';
 import HorizontalFilter from '../../components/horizontalFilter/HorizontalFilter';
 import SingleContent from '../../components/singleContent/SingleContent';
 import Slider from '../../slider/Slider';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {

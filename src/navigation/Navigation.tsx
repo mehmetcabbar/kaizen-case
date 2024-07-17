@@ -1,4 +1,4 @@
-import { Platform, View } from 'react-native';
+import { Platform, SafeAreaView, View } from 'react-native';
 import { fontFamily, fontSize } from '../utils/constants';
 import { createBottomTabNavigator, BottomTabNavigationOptions, BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute, NavigationContainer } from '@react-navigation/native';

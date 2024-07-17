@@ -3,8 +3,10 @@
         { 
             "id": 1, 
             "title": "2,5 LT Coca-Cola kapakları\nCoca-Cola +Coffee kazandırıyor!",
+            "detailsTitle": "Her Altın Kapakta Bir\nCoca-Cola + Coffee Keyfi",
             "buttonHex": "#F40000", 
-            "image": "slider1.png"
+            "image": "slider1.png", 
+            "description": "Coca-Cola Coffee, kolanın lezzetini kahve aroması ile bir araya getirir.  Brezilya kahve çekirdeklerinin lezzetiyle aromalanan Coca Cola, geleneksel lezzetine modern bir yorum katarak raflarda yer alır.\n\nYeni tatlara açık olanların beğenisini kazanan kahveli Coca-Cola, kutu tasarımı ile çantada bile kolaylıkla taşınır. Kahve tiryakilerinin bir yudum ferahlık istediği anlarda tercihi olacak ürün, dünyada en çok yankı uyandıran kola edisyonları arasında yer almaktadır.\n\nİçeceğin soğuk tüketilmesi önerilir. Buzla beraber içilebilir. \n\nÖzellikle sıcak yaz günlerinde ferahlatıcı etki gösterir. "
         },
         { 
             "id": 2, 

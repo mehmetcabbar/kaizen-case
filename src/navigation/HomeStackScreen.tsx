@@ -19,7 +19,9 @@ const HomeStackScreen = () => {
                 name="Details"
                 component={Details}
                 options={({ navigation, route }): any => ({
-                    headerShown: false
+                    headerShown: false,
+                    presentation: 'fullScreenModal'
+
                 })}
             />
         </HomeStack.Navigator>

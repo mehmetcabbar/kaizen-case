@@ -6,6 +6,8 @@
         "please_try_again_later": "Lütfen, daha sonra tekrar deneyin!",
         "login": "Giriş Yap", 
         "last_twelve_days": "son {{count}} gün",
-        "more_and_more": "Daha Daha"
+        "more_and_more": "Daha Daha", 
+        "join_now": "Hemen Katıl"
+
     }
 }
