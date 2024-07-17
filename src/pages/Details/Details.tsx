@@ -1,14 +1,13 @@
 import React from 'react'
-import { View } from 'react-native'
-import { Text } from 'react-native-svg'
+import { View, Text, ScrollView } from 'react-native'
+import { styles } from './Styles'
 
-type Props = {}
 
-const Details = (props: Props) => {
+const Details = () => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', borderColor: "white" }}>
-            <Text>Details Screen!</Text>
-        </View>
+        <ScrollView style={styles.container}>
+            <Text>Details</Text>
+        </ScrollView>
     )
 }
 

@@ -5,6 +5,7 @@
         "function_will_be_added_soon": "Yakında...",
         "please_try_again_later": "Lütfen, daha sonra tekrar deneyin!",
         "login": "Giriş Yap", 
-        "last_twelve_days": "son {{count}} gün"
+        "last_twelve_days": "son {{count}} gün",
+        "more_and_more": "Daha Daha"
     }
 }

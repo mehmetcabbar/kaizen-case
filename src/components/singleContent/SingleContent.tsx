@@ -1,20 +1,47 @@
-import { Image, Text, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './Styles'
 import { useTranslation } from 'react-i18next'
+import { ISingleType } from '../../types/Types'
+
+//Our brand image are here
 import SliderBrands1 from '../../images/sliderBrands/sliderBrands1.svg'
+import SliderBrands2 from '../../images/sliderBrands/sliderBrands2.svg'
+
+//Component is here
 import Spacer from '../spacer/Spacer'
 
-const SingleContent = () => {
+const imagePaths: any = {
+    "slider1.png": require('../../images/slider/slider1.png'),
+    "slider2.png": require('../../images/slider/slider2.png'),
+    "slider3.png": require('../../images/slider/slider1.png'),
+    "slider4.png": require('../../images/slider/slider1.png'),
+    "slider5.png": require('../../images/slider/slider1.png'),
+};
+
+const SingleContent = ({ image, title, buttonHex, index, onPress }: ISingleType) => {
     const { t } = useTranslation()
-    const count = 15
+    const count = 12
     const translation = t('last_twelve_days', { count });
     const parts = translation.split(count.toString());
 
+    const getMyBrand = () => {
+        if (index === 0) {
+            return <SliderBrands1 />
+        } else if (index % 2 === 0) {
+            return <SliderBrands1 />
+        } else {
+            return <SliderBrands2 />
+        }
+    }
+
     return (
-        <View style={styles.container}>
+        <TouchableOpacity
+            style={styles.container}
+            onPress={onPress}
+        >
             <View>
                 <Image
-                    source={require('../../images/slider/slider1.png')}
+                    source={imagePaths[image]}
                 />
                 <View style={styles.dayBox}>
                     <Text style={styles.dayContent}>
@@ -24,16 +51,15 @@ const SingleContent = () => {
                     </Text>
                 </View>
                 <View style={styles.brandBox}>
-                    <SliderBrands1 />
+                    {getMyBrand()}
                 </View>
             </View>
             <View style={styles.contentBox}>
-                <Text style={styles.contentText}>2,5 LT Coca-Cola kapakları </Text>
-                <Text style={styles.contentText2}>Coca-Cola +Coffee kazandırıyor!</Text>
+                <Text style={styles.contentText}>{title} </Text>
                 <Spacer paddingVertical={5} />
-                <Text style={[styles.link, { color: 'red' }]}>Daha Daha</Text>
+                <Text style={[styles.link, { color: buttonHex }]}>{t("more_and_more")}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

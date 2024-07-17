@@ -2,28 +2,33 @@
     "content": [
         { 
             "id": 1, 
-            "name": "Fırsat Bul", 
-            "image": "require('../assets/images/filter1.png')"
+            "title": "2,5 LT Coca-Cola kapakları\nCoca-Cola +Coffee kazandırıyor!",
+            "buttonHex": "#F40000", 
+            "image": "slider1.png"
         },
         { 
             "id": 2, 
-            "name": "Sprite", 
-            "image": "require('../assets/images/filter1.png')"
+            "title": "2,5 LT Sprite kapakları\n330 ML Kutu kazandırıyor!",
+            "buttonHex": "#009639", 
+            "image": "slider2.png"
         },
         { 
             "id": 3, 
-            "name": "Burger King", 
-            "image": "require('../assets/images/filter1.png')"
+            "title": "Ultrices montes blandit ut\naliquam condimentum in a.", 
+            "buttonHex": "#F40000", 
+            "image": "slider1.png"
         },
         { 
             "id": 4, 
-            "name": "Trendyol", 
-            "image": "require('../assets/images/filter1.png')"
+            "title": "Arcu accumsan laoreet ligula\nrisus sit consectetur nibh.", 
+            "buttonHex": "#009639", 
+            "image": "slider2.png"
         },
         { 
             "id": 5, 
-            "name": "Yemek Sepeti", 
-            "image": "require('../assets/images/filter1.png')"
+            "title": "Fusce montes magnis scelerisque\nlitora quisque fermentum.", 
+            "buttonHex": "#F40000", 
+            "image": "slider1.png"
         }
     ],
     "filters": [

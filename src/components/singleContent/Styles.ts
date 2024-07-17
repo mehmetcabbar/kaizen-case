@@ -1,13 +1,15 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { myColors } from "../../utils/constants/myColors";
 import { fontFamily, fontSize } from "../../utils/constants";
 
 
 export const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 14,
+        // paddingHorizontal: 14,
+        // paddingLeft: 14,
         position: 'relative',
         alignItems: 'center',
+        justifyContent: 'center'
     },
     dayBox: {
         position: 'absolute',
@@ -54,14 +56,16 @@ export const styles = StyleSheet.create({
         fontFamily: fontFamily.BOLD,
         fontSize: fontSize.MEDIUM,
         color: myColors.MY_BLACK,
-        letterSpacing: -0.22
+        letterSpacing: -0.22,
+        textAlign: 'center'
     },
     contentText2: {
         fontFamily: fontFamily.BOLD,
         fontSize: fontSize.MEDIUM,
         color: myColors.MY_BLACK,
         letterSpacing: -0.22,
-        paddingTop: 2
+        paddingTop: Platform.OS === "ios" ? 2 : 0,
+        marginTop: Platform.OS === "ios" ? 0 : -4
     },
     link: {
         fontFamily: fontFamily.BOLD,

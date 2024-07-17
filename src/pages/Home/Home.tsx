@@ -6,6 +6,7 @@ import MyHeader from '../../components/myHeader/MyHeader'
 import Spacer from '../../components/spacer/Spacer';
 import HorizontalFilter from '../../components/horizontalFilter/HorizontalFilter';
 import SingleContent from '../../components/singleContent/SingleContent';
+import Slider from '../../slider/Slider';
 
 
 const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {
@@ -15,7 +16,7 @@ const Home = ({ navigation }: BottomTabScreenProps<IHomePageTypes, 'Home'>) => {
             <Spacer paddingVertical={10} />
             <HorizontalFilter />
             <Spacer paddingVertical={10} />
-            <SingleContent />
+            <Slider />
         </View>
     )
 }
