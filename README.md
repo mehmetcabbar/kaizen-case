@@ -46,6 +46,7 @@ npx react-native run-ios
 ```
 
 ## Run project on Android
+If Android Studio is not installed on your computer, install it. After the installation process, you can run the project for Android with the code below.
 
 ```sh
 npx react-native run-android
